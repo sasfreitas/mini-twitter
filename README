@@ -1,0 +1,47 @@
+Mini twitter API
+========================
+
+- Read tweets for a given user, include own tweets and followed user tweets (user/{id}/tweets, method=GET)
+- Filter tweets by keyword for a given user, include own tweets and followed user tweets (user/{id}/tweets?search={search}, method=GET)
+- Get list of users followed by a given user (user/{id}/followed, method=GET)
+- Start following another user (user/{id}/follow, method=PUT)
+- Call to stop following another user (user/{id}/follow, method=DELETE)
+
+Prerequisites for development
+-----------------------------
+1. Maven 3.x
+
+Prerequisites for running
+-------------------------
+1. Java 8
+2. Available port for RESTful API endpoints (8080 by default)
+
+How to build
+------------
+```
+$ mvn clean install
+```
+
+How to run
+----------
+```
+$ mvn clean tomcat7:run
+```
+
+Dependencies
+------------
+All dependencies are specified in pom.xml file:
+```
+pom.xml
+```
+
+Config
+------
+Config is stored in `application.properties` file
+```
+security-server/src/main/resources/application.properties
+```
+
+Backing services
+----------------
+1. MySQL
